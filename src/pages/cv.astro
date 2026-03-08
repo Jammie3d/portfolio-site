@@ -3,31 +3,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="Resume" sideBarActiveItemID="cv">
+<BaseLayout title="Curriculum Vitae" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="text-3xl w-full font-bold">About Me</div>
   </div>
 
   <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+    3D Environment Artist with experience creating playable real-time environments and collaborating on shipped UGC games.
   </div>
 
   <div class="mb-5">
@@ -36,57 +18,80 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Level artist at Monoford Studios (Freelance)"
+      subtitle="Oct 2023–Present, Remote"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Designing and set dressing open-world maps for two UEFN games.
+      Creating custom stylized assets to match the existing Fortnite artstyle.
+      Optimizing wherever possible to stay within limited memory constraints.
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="3D Artist at Ape Tavern (Hobbyist)"
+      subtitle="Aug 2022–Present, Remote"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Creating maps, 3D assets, VFX and branding for multiple games within the s&box UGC platform.
+      Competed in several game jams and won first place on multiple occasions.
+      Working in an actively developing engine, requesting features and reporting bugs to Facepunch.
     </TimeLineElement>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
+    <div class="text-3xl w-full font-bold">Education</div>
   </div>
 
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Digital Media and Animation. Bachelor of Arts, Honours Degree"
+      subtitle="2012–2013 at University of Plymouth"
+    />
+    <TimeLineElement
+      title="Interactive Multimedia with Graphic Design. Foundation Degree"
+      subtitle="2010–2012 at City of Bristol College"
+    />
+    <TimeLineElement
+      title="Interactive Multimedia. BTEC National Diploma"
+      subtitle="2007–2010 at City of Bristol College"
+    />
+  </div>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      Environment Art
+      <p class="text-sm text-base-content/70">3D modelling, PBR materials, shader authoring, terrain sculpting, lighting, composition, rendering.</p>
+    </li>
+    <li>
+      Production
+      <p class="text-sm text-base-content/70">LODs, collisions, version control.</p>
+    </li>
+    <li>
+      Additional
+      <p class="text-sm text-base-content/70">Realtime VFX, graphic design, video editing.</p>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Software</div>
+  </div>
+
   <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
+    <li>Unreal Engine</li>
+    <li>Blender</li>
+    <li>Substance Painter</li>
+    <li>Substance Designer</li>
+    <li>Marmoset Toolbag</li>
+    <li>ZBrush</li>
+    <li>s&box</li>
+    <li>UEFN</li>
+    <li>Affinity Photo</li>
+    <li>Photoshop</li>
+    <li>Git</li>
+    <li>Gaea</li>
+    <li>DaVinci Resolve</li>
+    <li>Speedtree</li>
+    <li>Houdini</li>
   </ul>
 </BaseLayout>
