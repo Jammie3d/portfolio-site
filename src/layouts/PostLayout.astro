@@ -8,13 +8,13 @@ export interface Props extends BlogSchema {}
 
 const { title, description, pubDate, updatedDate, heroImage, badge, tags = [] } = Astro.props;
 dayjs.extend(localizedFormat);
-const displayDate = dayjs(pubDate).format("DD MMM YYYY")
+const displayDate = dayjs(pubDate).format("DD MMM YYYY");
 import { Image } from "astro:assets";
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}, ogType="article">
   <main class="md:flex md:justify-center">
-    <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
+    <article class="prose prose-lg max-w-[750px] prose-img:mx-auto blog-content">
       {heroImage && <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />}
       <h1 class="title my-2 text-4xl font-bold">{title}</h1>
       {pubDate && <time>{displayDate}</time>}
@@ -38,6 +38,41 @@ import { Image } from "astro:assets";
       }
       <div class="divider my-2"></div>
       <slot />
+      <!-- Simple Lightbox -->
+      <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50 cursor-zoom-out">
+        <img id="lightbox-img" class="max-w-[90%] max-h-[90%] rounded shadow-lg" />
+      </div>
+
+      <script>
+        // Select all images inside the blog content
+        const images = document.querySelectorAll<HTMLImageElement>(".blog-content img");
+
+        const modal = document.getElementById("lightbox")!;
+        const modalImg = document.getElementById("lightbox-img") as HTMLImageElement;
+
+        images.forEach(image => {
+          image.style.cursor = "zoom-in";
+
+          image.addEventListener("click", () => {
+            modalImg.src = image.src;
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+          });
+        });
+
+        modal.addEventListener("click", () => {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        });
+
+        // Optional: close on ESC key
+        document.addEventListener("keydown", e => {
+          if (e.key === "Escape") {
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+          }
+        });
+      </script>
     </article>
   </main>
 </BaseLayout>
