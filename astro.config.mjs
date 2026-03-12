@@ -5,6 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jammie3d.github.io/',
+  site: 'https://jammie3d.github.io',
   integrations: [mdx(), sitemap(), tailwind()]
 });
